@@ -4,7 +4,6 @@
 /* Light purple: c3c9e9 */
 /* Purply gray: aaabbc */
 
-
 body {
 	font-family: Helvetica, Arial;
         background-color: #373F47;
@@ -17,4 +16,17 @@ body {
 	font-size: 20px;
 }
 
+a {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    color: #c3c9e9;
+}
 
+a:hover {
+    color: #88899a;
+    transition: .4s;
+}
+
+h1, h2 {
+    color: #6c91c2;
+}
