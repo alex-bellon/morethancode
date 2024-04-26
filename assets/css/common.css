@@ -1,13 +1,25 @@
-/* Charcoal: 373f47 */
-/* Light brown: 8B8982 */
-/* Light blue: 6c91c2 */
-/* Light purple: c3c9e9 */
-/* Purply gray: aaabbc */
+@font-face {
+    font-family: "Rubik";
+    src: url('../fonts/Rubik-Regular.ttf'),
+    src: url('../fonts/Rubik-Bold.ttf'),
+    src: url('../fonts/Rubik-Italic.ttf'),
+    src: url('../fonts/Rubik-BoldItalic.ttf')
+}
+
+@font-face {
+    font-family: "RubikMed";
+    src: url('../fonts/Rubik-Medium.ttf'),
+}
+
+@font-face {
+    font-family: "RubikMono";
+    src: url('../fonts/RubikMonoOne-Regular.ttf'),
+}
 
 body {
-	font-family: Helvetica, Arial;
-        background-color: #373F47;
-	color: #c3c9e9;
+	font-family: "RubikMed", Arial;
+    background-color: #37c0d4;
+    color: #f7f5d4;
 	margin-top: 100px;
 	width: 50%;
 	max-width: 1600px;
@@ -19,14 +31,20 @@ body {
 a {
     text-decoration-line: underline;
     text-decoration-style: dotted;
-    color: #c3c9e9;
+    color: #f7f5d4;
 }
 
 a:hover {
-    color: #88899a;
+    color: #faa819;
     transition: .4s;
 }
 
+b {
+    color: #F9CF77;
+}
+
 h1, h2 {
-    color: #6c91c2;
+    color: #f00000;
+    text-shadow: 4px 4px #faa819;
+    font-family: "RubikMono", Arial;
 }
