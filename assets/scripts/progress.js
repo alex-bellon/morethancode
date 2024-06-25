@@ -130,8 +130,6 @@ class ProgressToggle extends HTMLElement {
 
     let radioButtons = rootElement.querySelectorAll(`.switch3-${moduleName}`);
 
-    console.log(radioButtons);
-
     radioButtons.forEach((radioButton) => {
       radioButton.addEventListener("change", updateStatus);
     });

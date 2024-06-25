@@ -7,6 +7,7 @@
   --navbar-text-color: hsl(0, 0%, 15%);
   --navbar-text-color-focus: black;
   --navbar-bg-contrast: hsl(0, 0%, 75%);
+  --navbar-link-hover: #cacaca;
 }
 
 [data-theme="dark"] {
@@ -14,6 +15,7 @@
   --navbar-text-color: hsl(0, 0%, 85%);
   --navbar-text-color-focus: white;
   --navbar-bg-contrast: hsl(0, 0%, 25%);
+  --navbar-link-hover: #111;
 
   --color-bg: #1f2f16;
   --color-fg: #f7f5d4;
@@ -160,7 +162,6 @@ details[open] > summary::before {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
   border-radius: 0.5rem;
 
   /* From responsive tutorial: https://www.aleksandrhovhannisyan.com/blog/responsive-navbar-tutorial/ */
@@ -175,11 +176,21 @@ details[open] > summary::before {
   color: var(--navbar-text-color-focus);
 }
 
-.navbar-links {
+.navbar-link {
   justify-content: center;
   width: 100%;
   padding: 0.4em 0.8em;
   border-radius: 5px;
+  color: var(--navbar-text-color);
+
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navbar-link:is(:focus, :hover) {
+  color: var(--navbar-text-color-focus);
+  background-color: var(--navbar-bg-contrast);
 }
 
 .navbar-links {
@@ -194,13 +205,16 @@ details[open] > summary::before {
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
 }
 
-#navbar-toggle[aria-expanded="true"] + #navbar-menu .navbar-links {
-  padding: 1em;
+.navbar-logo {
+  border-radius: 0.5em;
+  width: 30px;
+  height: 30px;
+  margin-inline-start: 0.5em;
+  margin: 0 0.5em;
 }
 
-.navbar-link:is(:focus, :hover) {
-  color: var(--navbar-text-color-focus);
-  background-color: var(--navbar-bg-contrast);
+#navbar-toggle[aria-expanded="true"] + #navbar-menu .navbar-links {
+  padding: 1em;
 }
 
 #navbar-toggle {
@@ -258,17 +272,9 @@ details[open] > summary::before {
   border-radius: 5px;
 }
 
-.navbar-links li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
 /* Change the link color to #111 (black) on hover */
 .navbar-links a:hover {
-  background-color: #111;
+  background-color: var(--navbar-link-hover);
 }
 
 @media screen and (max-width: 600px) {
