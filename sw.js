@@ -9,23 +9,38 @@ self.addEventListener("install", function (event) {
   // Tell the active service worker to take control of the page immediately.
   self.skipWaiting();
   event.waitUntil(
-    caches.open(CACHE_NAME).then(function (cache) {
-      // Add all of the URLs here so that they are
-      // added to the cache when the ServiceWorker is installed
-      const CONTENT_URLS = [
-        "/",
-        "index.html",
-        "content/01-identity.pdf",
-        "content/03-diversity-and-inclusion.pdf",
-        "content/04-accessibility-and-disability.pdf",
-        "/assets/scripts/main.js",
-        // "content/05-privacy-and-security.pdf",
-        // "content/06-lgbtqia-and-gender.pdf",
-        // "content/07-classism-and-socioeconomic-status.pdf",
-      ];
+    caches
+      .open(CACHE_NAME)
+      .then((cache) => {
+        // Add all of the URLs here so that they are
+        // added to the cache when the ServiceWorker is installed
+        const CONTENT_URLS = [
+          "/",
+          "index.html",
+          "content/01-identity.pdf",
+          "content/03-diversity-and-inclusion.pdf",
+          "content/04-accessibility-and-disability.pdf",
+          "assets/scripts/main.js",
+          "assets/scripts/progress.js",
+          "content/05-racism-and-ethnicity.pdf",
+          "content/06-lgbtqia-and-gender.pdf",
+          "content/07-classism-and-socioeconomic-status.pdf",
+        ];
 
-      return cache.addAll(CONTENT_URLS);
-    })
+        return cache.addAll(CONTENT_URLS).catch((error) => {
+          console.error("Error adding URLs to cache with addall", error);
+          for (let link of CONTENT_URLS) {
+            cache.add(link).catch((error) => {
+              console.error("sw: add error on", link, " ", error);
+              throw error;
+            });
+          }
+        });
+      })
+      .catch((error) => {
+        console.error("Error opening cache", error);
+        throw error;
+      })
   );
 });
 
