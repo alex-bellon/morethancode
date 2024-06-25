@@ -1,23 +1,223 @@
-<html>
-	<head>
-		<title> Home | More Than Code</title>
-		<link rel='stylesheet' type='text/css' href='assets/css/common.css'>
-		<link rel='icon' type='image/png' href='assets/images/icon.png'>
-	</head>
+<html lang="en">
+  <head>
+    <title>Home | More Than Code</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/common.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/images/icons/ujima-icon-500x500.png"
+    />
 
-	<body>
-		<h1>More Than Code</h1>
-	    <b>There's more to computing science than just code.</b> These modules discuss the different social and cultural impacts of computing, and what can go wrong if hardware and software are not developed with care and respect for its possible users. 	
-		<h2>Modules</h2>
-		<ul>
-			<li><a href="content/01-identity.pdf">Module 1: Identity</a></li>
-			<li><a href="">Module 2: Core Concepts [COMING SOON]</a></li>
-			<li><a href="content/03-diversity-and-inclusion.pdf">Module 3: Diversity and Inclusion</a></li>
-			<li><a href="04-accessibility-and-disability">Module 4: Accessibility and Disability</a></li>
-			<li><a href="content/05-racism-and-ethnicity.pdf">Module 5: Racism and Ethnicity</a></li>
-			<li><a href="content/06-lgbtqia-and-gender.pdf">Module 6: LGBTQIA+ and Gender</a></li>
-			<li><a href="content/07-classism-and-socioeconomic-status.pdf">Module 7: Classism and Socioeconomic Status</a></li>
-			<!--<li><a href="08-hidden-gems">Module 8: Hidden Gems</a></li>-->
-		</ul>
-	</body>
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+    />
+    <script src="assets/scripts/main.js" type="module"></script>
+    <!-- Progress Toggle Custom Element -->
+    <script src="assets/scripts/progress.js" type="module"></script>
+    <link rel="manifest" href="manifest.json" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header id="navbar">
+      <nav class="navbar-container container">
+        <a href="/" class="home-link">
+          <div class="navbar-logo"></div>
+          More Than Code
+        </a>
+
+        <button
+          type="button"
+          id="navbar-toggle"
+          aria-controls="navbar-menu"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div id="navbar-menu" aria-labelledby="navbar-toggle">
+          <ul class="navbar-links">
+            <li class="navbar-item">
+              <a class="navbar-link" href="#Home">About</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="#Modules">Modules</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="#Contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <h1 id="Home">More Than Code</h1>
+    <b>There's more to computing science than just code.</b> These modules
+    discuss the different social and cultural impacts of computing, and what can
+    go wrong if hardware and software are not developed with care and respect
+    for its possible users.
+    <h2 id="Modules">Modules</h2>
+    <p>
+      Click on the dotted underline text to open each module, or click on the
+      arrows to open a short summary of each modue.
+    </p>
+    <details>
+      <summary>
+        <h3><a href="content/01-identity.pdf">Module 1: Identity</a></h3>
+      </summary>
+      <p>
+        Only a small portion of an iceberg can be seen above the waterline.
+        Similarly, understanding someone's identity is limited by what we see on
+        the surface. This mini lesson explores the concept of identity and the
+        importance of going "below the waterline" to challenge and avoid
+        stereotypes and identity-based bias.
+      </p>
+      <ol>
+        Sections:
+        <li>Module 1: Define Identity</li>
+        <li>Module 2: Understand importance of identity</li>
+        <li>Module 3: Identity, Inclusion, and Belonging</li>
+        <li>Module 4: Applying Identity and Inclusion</li>
+      </ol>
+
+      <progress-toggle module="Module1"></progress-toggle>
+      <noscript><p>Enable javascript to track module progress!</p></noscript>
+    </details>
+
+    <details>
+      <summary>
+        <h3><a href="">Module 2: Core Concepts [COMING SOON]</a></h3>
+      </summary>
+      <p>COMING SOON</p>
+    </details>
+    <details>
+      <summary>
+        <h3>
+          <a href="content/03-diversity-and-inclusion.pdf"
+            >Module 3: Diversity and Inclusion</a
+          >
+        </h3>
+      </summary>
+
+      <ol>
+        This Module Teaches:
+        <li>Module 1: Define diversity and inclusion</li>
+        <li>Module 2: Explain the benefits of diversity</li>
+        <li>
+          Module 3: Identify the difference between diversity and inclusion
+        </li>
+        <li>Module 4: Define computer science</li>
+        <li>
+          Module 5: Illustrate their understanding through the module activity
+        </li>
+      </ol>
+
+      <progress-toggle module="Module3"></progress-toggle>
+    </details>
+
+    <details>
+      <summary>
+        <h3>
+          <a href="content/04-accessibility-and-disability.pdf"
+            >Module 4: Accessibility and Disability</a
+          >
+        </h3>
+      </summary>
+      <p>
+        Disabilities can be visible or invisible and vary widely. The social
+        model of disability focuses on removing societal barriers rather than
+        fixing the individual. Language preferences (person-first vs.
+        identity-first) and strong cultural identities are important within
+        disability communities. Society often views disabilities negatively,
+        leading to dehumanization and bullying. Resources for creating
+        accessible technology include guidelines from the W3C and various
+        accessibility initiatives.
+      </p>
+
+      <progress-toggle module="Module4"></progress-toggle>
+    </details>
+
+    <details>
+      <summary>
+        <h3>
+          <a href="content/05-racism-and-ethnicity.pdf"
+            >Module 5: Racism and Ethnicity</a
+          >
+        </h3>
+      </summary>
+      <p>
+        This module highlights racial bias in machine learning models across
+        recruitment, word associations, facial recognition, and criminal
+        justice, showing how these models often reflect historical human biases
+        and misrepresentative data. Examples include gender bias in recruitment
+        tools, stereotypical associations in language models, and facial
+        recognition algorithms with lower accuracy for non-white individuals.
+        Addressing these biases involves recognizing their causes and applying
+        practical exercises to improve model fairness.
+      </p>
+
+      <progress-toggle module="Module5"></progress-toggle>
+    </details>
+    <details>
+      <summary>
+        <h3>
+          <a href="content/06-lgbtqia-and-gender.pdf"
+            >Module 6: LGBTQIA+ and Gender</a
+          >
+        </h3>
+      </summary>
+      <p>
+        This module discusses how technology encodes assumptions and biases,
+        particularly affecting LGBTQIA+ individuals. They cover definitions of
+        sex, gender, and related complexities, highlight harmful assumptions,
+        and provide historical examples of discrimination in STEM. The paradox
+        of visibility and how technology can perpetuate existing inequities are
+        explored, along with resources for further reading on gender and
+        technology.
+      </p>
+
+      <progress-toggle module="Module6"></progress-toggle>
+    </details>
+    <details>
+      <summary>
+        <h3>
+          <a href="content/07-classism-and-socioeconomic-status.pdf"
+            >Module 7: Classism and Socioeconomic Status</a
+          >
+        </h3>
+      </summary>
+      <p>
+        This module explores classism in college, focusing on motivations for
+        attending college, the importance of independent versus interdependent
+        skills, and the impact of socioeconomic status on academic performance.
+        They include quizzes, a discussion of an article on college mobility
+        culture, and suggestions for improving support for students from lower
+        socioeconomic backgrounds.
+      </p>
+
+      <progress-toggle module="Module7"></progress-toggle>
+    </details>
+    <!--<li><a href="08-hidden-gems">Module 8: Hidden Gems</a></li>-->
+
+    <section id="reset-progress"></section>
+
+    <h2 id="Contact">Contact Us</h2>
+    <p>
+      Email:
+      <a href="mailto:ujimasp@gmail.com?subject=MoreThanCode Inquiry"
+        >ujimasp@gmail.com</a
+      >
+    </p>
+  </body>
 </html>
