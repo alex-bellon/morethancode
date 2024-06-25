@@ -1,10 +1,24 @@
 :root {
   --content-offset: 1em;
+}
 
+[data-theme="light"] {
+  --navbar-bg-color: hsl(0, 0%, 85%);
+  --navbar-text-color: hsl(0, 0%, 15%);
+  --navbar-text-color-focus: black;
+  --navbar-bg-contrast: hsl(0, 0%, 75%);
+}
+
+[data-theme="dark"] {
   --navbar-bg-color: hsl(0, 0%, 15%);
   --navbar-text-color: hsl(0, 0%, 85%);
   --navbar-text-color-focus: white;
   --navbar-bg-contrast: hsl(0, 0%, 25%);
+
+  --color-bg: #1f2f16;
+  --color-fg: #f7f5d4;
+  --link-hover: #faa819;
+  --link-color: #f9cf77;
 }
 
 @font-face {
@@ -27,8 +41,8 @@
 
 body {
   font-family: "RubikMed", Arial;
-  background-color: #1f2f16;
-  color: #f7f5d4;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
   margin-top: 100px;
   width: 70%;
   /* max-width: 1600px; */
@@ -40,21 +54,21 @@ body {
 a {
   text-decoration-line: underline;
   text-decoration-style: dotted;
-  color: #f7f5d4;
+  color: var(--color-fg);
 }
 
 a:hover {
-  color: #faa819;
+  color: var(--link-hover);
   transition: 0.4s;
 }
 
 b {
-  color: #f9cf77;
+  color: var(--link-color);
 }
 
 h1,
 h2 {
-  color: #f7f5d4;
+  color: var(--color-fg);
   text-shadow: 1px 1px #736ced;
   font-family: "RubikMono", Arial;
 }
@@ -171,12 +185,12 @@ details[open] > summary::before {
 .navbar-links {
   list-style: none;
   position: absolute;
+  left: 0;
+  right: 0;
   background-color: var(--navbar-bg-color);
   display: flex;
   flex-direction: column;
   align-items: center;
-  left: 0;
-  right: 0;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -184,7 +198,7 @@ details[open] > summary::before {
   padding: 1em;
 }
 
-.navbar-links:is(:focus, :hover) {
+.navbar-link:is(:focus, :hover) {
   color: var(--navbar-text-color-focus);
   background-color: var(--navbar-bg-contrast);
 }
