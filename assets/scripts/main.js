@@ -5,6 +5,14 @@ window.addEventListener("DOMContentLoaded", init);
 async function init() {
   initializeServiceWorker();
 
+  initResetProgress();
+
+  initNavbar();
+
+  initThemeing();
+}
+
+function initResetProgress() {
   // Reset progress button
   let resetProgressHolder = document.querySelector("#reset-progress");
 
@@ -18,12 +26,14 @@ async function init() {
   resetButton.textContent = "Reset Progress";
 
   resetButton.style = `
-    border-radius: 5px;
-    
-  `;
+  border-radius: 5px;
+  
+`;
 
   resetProgressHolder.appendChild(resetButton);
+}
 
+function initNavbar() {
   // Navbar toggle
   let navbarToggle = document.querySelector("#navbar-toggle");
 
@@ -41,8 +51,6 @@ async function init() {
 
   navbarLinksContainer.addEventListener("click", (e) => e.stopPropagation());
   navbarMenu.addEventListener("click", toggleNavbarVisibility);
-
-  initThemeing();
 }
 
 function initThemeing() {

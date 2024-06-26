@@ -17,6 +17,19 @@
   --navbar-bg-contrast: hsl(0, 0%, 25%);
   --navbar-link-hover: #111;
 
+  --color-bg: hsl(240, 100%, 5%);
+  --color-fg: #f7f5d4;
+  --link-hover: #faa819;
+  --link-color: #f9cf77;
+}
+
+[data-theme="green"] {
+  --navbar-bg-color: hsl(0, 0%, 15%);
+  --navbar-text-color: hsl(0, 0%, 85%);
+  --navbar-text-color-focus: white;
+  --navbar-bg-contrast: hsl(0, 0%, 25%);
+  --navbar-link-hover: #111;
+
   --color-bg: #1f2f16;
   --color-fg: #f7f5d4;
   --link-hover: #faa819;
@@ -113,8 +126,6 @@ details[open] > summary::before {
 }
 
 /* Navbar */
-
-/* TO ADD: navbar-item */
 
 .container {
   max-width: 70%;
