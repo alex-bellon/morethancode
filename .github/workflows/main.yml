@@ -12,5 +12,5 @@ jobs: # the things being executed
       - name: Install Dependencies
         run: npm install
       - name: E2E Test
-        run: http-server . -p 3000
+        run: npx http-server . -p 3000
           npm test ./__tests__/progress-toggle.test.js # the actual testing line
