@@ -5,7 +5,7 @@ describe("Testing for basic features of the Progress Toggle", () => {
   beforeAll(async () => {
     console.log("beforeAll");
     page = await browser.newPage();
-    await page.goto("http://127.0.0.1:5500/index.html");
+    await page.goto("http://localhost:3000/index.html");
   });
 
   afterAll(async () => {
