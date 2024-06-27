@@ -11,6 +11,14 @@ jobs: # the things being executed
       - uses: actions/checkout@v4 # using version 4 of Actions
       - name: Install Dependencies
         run: npm install
+
+      - name: Setup Xvfb
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb
+          sudo Xvfb :99 -ac &
+          export DISPLAY=:99
+
       - name: Start local server
         id: start-server
         run: npm start &
@@ -23,3 +31,7 @@ jobs: # the things being executed
 
       - name: E2E Test
         run: npm run test:ci # the actual testing line
+
+      - name: End action
+        if: always()
+        run: exit 0
