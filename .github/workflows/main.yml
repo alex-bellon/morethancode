@@ -22,4 +22,4 @@ jobs: # the things being executed
         run: sleep 10 # Adjust the sleep duration as necessary
 
       - name: E2E Test
-        run: npm test:ci # the actual testing line
+        run: npm run test:ci # the actual testing line
