@@ -11,8 +11,15 @@ jobs: # the things being executed
       - uses: actions/checkout@v4 # using version 4 of Actions
       - name: Install Dependencies
         run: npm install
-      - name: Start Server
-        run: npx http-server . -p 3000
-          npm test ./__tests__/progress-toggle.test.js # the actual testing line
+      - name: Start local server
+        id: start-server
+        run: npm start &
+        env:
+          CI: true
+          SERVER_PID: $!
+
+      - name: Wait for server to be ready
+        run: sleep 10 # Adjust the sleep duration as necessary
+
       - name: E2E Test
         run: npm test ./__tests__/progress-toggle.test.js # the actual testing line
