@@ -24,8 +24,8 @@ function initResetProgress() {
   resetButton.textContent = "Reset Progress";
 
   resetButton.style = `
-    border-radius: 5px; 
-    `;
+
+  `;
 
   resetProgressHolder.appendChild(resetButton);
 }

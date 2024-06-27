@@ -95,8 +95,12 @@ summary {
   margin-bottom: 0.5em;
   align-items: center;
   cursor: pointer;
-  color: #880000;
 }
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
 summary h3 {
   margin: 0.5rem;
 }
@@ -126,16 +130,27 @@ details[open] > summary::before {
 }
 
 button {
-  background-color: #008CBA; /* Blue */
-  border-radius: 4px;
-  color: white;
+  background-color: #00a5dc; /* Blue */
+  border-radius: 8px;
+  color: Black;
   padding: 12px 28px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 12px;
+  font-size: 20px;
 }
 
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #00a5dc; /* Blue */
+  border-radius: 8px;
+  color: Black;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
 
 /* Navbar */
 

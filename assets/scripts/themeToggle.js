@@ -11,7 +11,28 @@ class ThemeToggle extends HTMLElement {
     let styleElement = document.createElement("style");
 
     styleElement.textContent = ` 
-        
+        button {
+        background-color: #00a5dc; /* Blue */
+        border-radius: 8px;
+        color: black;
+        padding: 12px 28px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        }
+
+          button:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        background-color: #00a5dc; /* Blue */
+        border-radius: 8px;
+        color: black;
+        padding: 12px 28px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        }
       `;
 
     rootElement.innerHTML = `
