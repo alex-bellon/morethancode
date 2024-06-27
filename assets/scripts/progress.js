@@ -129,19 +129,54 @@ class ProgressToggle extends HTMLElement {
     this.shadowRoot.appendChild(rootElement);
 
     let radioButtons = rootElement.querySelectorAll(`.switch3-${moduleName}`);
-
     radioButtons.forEach((radioButton) => {
       radioButton.addEventListener("change", updateStatus);
     });
 
+    const inProgressButton = rootElement.querySelector(
+      'input[type="radio"][role="toggle"][value="inprogress"]'
+    );
+
+    let relatedLink = document.querySelector(`a[data-module="${moduleName}"]`);
+
+    relatedLink.onclick = () => {
+      let currStatus = localStorage.getItem(`${moduleName}-status`);
+      if (!currStatus || currStatus == "todo") {
+        radioButtons.forEach((radioButton) => {
+          radioButton.checked = false;
+        });
+
+        inProgressButton.checked = true;
+        updateStatus("inprogress");
+      }
+    };
+
+    window.onbeforeunload = () => {
+      updateStatus();
+    };
+
     function updateStatus() {
-      console.log(`Updating status of ${moduleName}`);
       let currStatus = rootElement.querySelector(
         `input[type="radio"][role="toggle"]:checked`
       );
-      console.log(currStatus);
       currStatus = currStatus ? currStatus.value : "";
       localStorage.setItem(`${moduleName}-status`, currStatus);
+      return true;
+    }
+
+    function updateStatus(newStatus) {
+      if (
+        !(
+          newStatus == "todo" ||
+          newStatus == "inprogress" ||
+          newStatus == "done"
+        )
+      ) {
+        return false;
+      }
+
+      localStorage.setItem(`${moduleName}-status`, newStatus);
+      return true;
     }
   }
 }
