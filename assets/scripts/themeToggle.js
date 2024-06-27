@@ -73,7 +73,8 @@ class ThemeToggle extends HTMLElement {
     /**
      * 1. Grab what we need from the DOM and system settings on page load
      */
-    const button = document.querySelector("[data-theme-toggle]");
+    const button = rootElement.querySelector("[data-theme-toggle]");
+    console.log(button);
     const localStorageTheme = localStorage.getItem("theme");
     const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -103,6 +104,8 @@ class ThemeToggle extends HTMLElement {
 
       currentThemeSetting = newTheme;
     });
+
+    console.log("ThemeToggle connected");
   }
 }
 

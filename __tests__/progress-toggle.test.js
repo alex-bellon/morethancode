@@ -3,7 +3,6 @@ describe("Testing for basic features of the Progress Toggle", () => {
 
   // First, sync the website
   beforeAll(async () => {
-    console.log("beforeAll");
     page = await browser.newPage();
     await page.goto("http://localhost:3000/index.html");
   });
