@@ -108,8 +108,8 @@ details p,
 details ul,
 details ol {
   margin-left: calc(var(--content-offset) + 1em);
-  margin-top: 10;
-  margin-bottom: 10;
+  margin-top: 20;
+  margin-bottom: 20;
   padding-bottom: 0.5em;
 }
 
