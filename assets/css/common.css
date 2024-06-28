@@ -72,6 +72,10 @@ a {
   color: var(--color-fg);
 }
 
+.notes a {
+  margin-left: 40px;
+}
+
 a:hover {
   color: var(--link-hover);
   transition: 0.4s;
@@ -123,6 +127,7 @@ summary::before {
   width: calc(var(--content-offset));
   flex-shrink: 0;
   transition: 0.3s;
+  margin-left: 40px;
 }
 details[open] > summary::before {
   transform: rotate(90deg);
@@ -162,7 +167,7 @@ button:hover {
 }
 
 #navbar {
-  --navbar-height: 64px;
+  --navbar-height: 100px;
   position: fixed;
   height: var(--navbar-height);
   background-color: var(--navbar-bg-color);
