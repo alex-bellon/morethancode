@@ -132,6 +132,7 @@ summary::before {
 details[open] > summary::before {
   transform: rotate(90deg);
   transform-origin: 40% 45% 0;
+  margin-left: 40px;
 }
 
 button {
