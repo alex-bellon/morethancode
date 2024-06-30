@@ -117,6 +117,10 @@ details ol {
   padding-bottom: 0.5em;
 }
 
+/* details a {
+  margin-left: 40px;
+} */
+
 details ol {
   list-style-position: inside;
   /* Lists by default have a padding, remove padding since we will set it manually ourselves */
