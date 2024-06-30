@@ -72,8 +72,8 @@ a {
   color: var(--color-fg);
 }
 
-.notes a {
-  margin-left: 50px;
+.notes {
+  margin-left: 40px;
 }
 
 a:hover {
